@@ -47,6 +47,7 @@ html {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-left: 1rem;
 }
 
 .navigation {
@@ -56,9 +57,9 @@ html {
 }
 
 .nav-item {
-  padding: 1rem;
   width: 100%;
   text-align: center;
+  padding: 0.5rem;
 }
 
 .nav-item:hover {
@@ -67,7 +68,7 @@ html {
 }
 
 .selected {
-  border: 5px solid #000;
+  border: 3px solid #000;
 }
 
 .channels-list {
@@ -112,9 +113,9 @@ html {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .nav-item {
-    padding: 1rem;
+    padding: 1.5rem;
     font-size: 2rem;
   }
   .main-content {
