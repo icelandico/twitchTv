@@ -25,8 +25,8 @@ function clickMenuItem(e) {
       break;
     case classList.contains("all"):
       clearSelected()
+      showAll()
       classList.add("selected")
-      fetchData(channels);
       break;
   }
 }
@@ -76,8 +76,6 @@ function getData(channelsList) {
   });
 }
 
-getData(channels)
-
 function createNode(data) {
   const channelInfo = data.channel;
   const streamingInfo = data.stream;
@@ -112,3 +110,4 @@ function insertNode(node) {
   channelsList.innerHTML += node;
 }
 
+getData(channels)
