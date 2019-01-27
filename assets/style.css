@@ -1,5 +1,6 @@
 * {
   box-sizing: content-box;
+  font-family: 'Roboto Mono', monospace;
 }
 body,
 html {
@@ -56,6 +57,17 @@ html {
 
 .nav-item {
   padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  background: #274252;
+}
+
+.selected {
+  border: 5px solid #000;
 }
 
 .channels-list {
@@ -88,16 +100,23 @@ html {
   height: auto;
 }
 
-.channel-text {
+.channel-text > div {
   margin-top: 0.5rem;
 }
 
 .offline {
   background: #94655f;
-  font-style: italic;
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
+  .nav-item {
+    padding: 1rem;
+    font-size: 2rem;
+  }
   .main-content {
     margin: 0 auto;
     width: 50%;
