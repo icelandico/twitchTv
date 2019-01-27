@@ -1,12 +1,13 @@
 body,
 html {
-  height: 100vh;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+  background: #274252;
 }
 
 .main-screen {
   height: 100%;
-  background: url("img/background.jpg") no-repeat;
-  background-size: cover;
 }
 
 .header-container {
@@ -19,4 +20,28 @@ html {
   text-align: center;
   font-size: 2rem;
   color: #fff;
+}
+
+.main-content {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.channel-container {
+  background: #fff;
+  padding: 2rem;
+  height: 50px;
+  margin: 1rem 0;
+  display: flex;
+  height: 70px;
+}
+
+.navigation {
+  background: #2985bb;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  padding: 1rem;
 }
