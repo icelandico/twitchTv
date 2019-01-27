@@ -1,3 +1,6 @@
+* {
+  box-sizing: content-box;
+}
 body,
 html {
   margin: 0;
@@ -28,12 +31,14 @@ html {
 }
 
 .channel-container {
-  background: #fff;
-  padding: 2rem;
+  background: #649771;
+  padding: 1rem;
   height: 50px;
-  margin: 1rem 0;
+  margin: 1rem;
   display: flex;
-  height: 70px;
+  height: 60px;
+  overflow: hidden;
+  align-items: center;
 }
 
 .navigation {
@@ -44,4 +49,33 @@ html {
 
 .nav-item {
   padding: 1rem;
+}
+
+.channels-list {
+  margin-top: 1rem;
+  height: 100%;
+  padding: 0.5rem;
+  background: #2985bb;
+}
+
+.channel-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.channel-img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.channel-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.offline {
+  background: #d6978f;
 }

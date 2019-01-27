@@ -2,16 +2,6 @@ const apiKey = "mpoy70bghold1xdu9kkittipivqp2p";
 const channelsApi = `https://cors-anywhere.herokuapp.com/wind-bow.glitch.me/twitch-api/channels/`;
 const streamsApi = `https://cors-anywhere.herokuapp.com/wind-bow.glitch.me/twitch-api/streams/`;
 
-// function fetchData(address) {
-//   return fetch(address, {
-//     headers: {
-//       "Client-ID": apiKey,
-//       'Access-Control-Allow-Origin': '*'
-//     }
-//   }).then(res => res.json())
-//     .then(data => console.log(data))
-// }
-
 function fetchData(elem) {
   let data = {
     "details": {},
@@ -38,19 +28,19 @@ getData(channels)
 function createNode(data) {
   const channelInfo = data.channel;
   const streamingInfo = data.stream;
-//   const channelStructure = `
-//   <li class="channel-container>
-//     <div>
-//       <p>
-//         <a href="${channelInfo.url}">${channelInfo.display_name}</a>
-//       </p>
-//     </div>
-//     <div>
-//       <img src="${channelInfo.logo}" class="channel-logo"
-//     </div>
-//   </li>
-// `;
-  //insertNode(channelStructure)
+  const channelStructure = `
+  <li class="channel-container ${streamingInfo.stream ? null : "offline"}">
+    <div class="channel-img">
+      <img class="channel-logo" src="${channelInfo.logo}">
+    </div>
+    <div>
+      <p>
+        <a href="${channelInfo.url}" class="channel-link">${channelInfo.display_name}</a>
+      </p>
+    </div>
+  </li>
+`;
+  insertNode(channelStructure)
 }
 
 function insertNode(node) {
