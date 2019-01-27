@@ -27,18 +27,25 @@ html {
 
 .main-content {
   margin: 0 auto;
-  width: 60%;
+  width: 90%;
 }
 
 .channel-container {
   background: #649771;
-  padding: 1rem;
+  padding: 0.5rem;
   height: 50px;
-  margin: 1rem;
-  display: flex;
-  height: 60px;
+  margin: 1rem 0;
+  min-height: 60px;
   overflow: hidden;
+  display: flex;
   align-items: center;
+}
+
+.channel-text {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .navigation {
@@ -54,20 +61,25 @@ html {
 .channels-list {
   margin-top: 1rem;
   height: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   background: #2985bb;
 }
 
 .channel-link {
   text-decoration: none;
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.channel-link:hover {
+  text-decoration: underline;
 }
 
 .channel-img {
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
 }
 
@@ -76,6 +88,52 @@ html {
   height: auto;
 }
 
+.channel-text {
+  margin-top: 0.5rem;
+}
+
 .offline {
-  background: #d6978f;
+  background: #94655f;
+  font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .channel-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .channel-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .channel-container {
+    margin: 1rem auto;
+    padding: 0.5rem 5rem;
+    min-height: 80px;
+  }
+
+  .details {
+    font-size: 1.5rem;
+  }
+
+  .channel-name {
+    flex: 2;
+  }
+
+  .stream {
+    flex: 4;
+    text-align: right;
+  }
+
+  .channel-link {
+    text-align: center;
+  }
 }

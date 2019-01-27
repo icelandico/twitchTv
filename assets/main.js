@@ -29,14 +29,17 @@ function createNode(data) {
   const channelInfo = data.channel;
   const streamingInfo = data.stream;
   const channelStructure = `
-  <li class="channel-container ${streamingInfo.stream ? null : "offline"}">
+  <li class="channel-container ${streamingInfo.stream ? "" : "offline"}">
     <div class="channel-img">
       <img class="channel-logo" src="${channelInfo.logo}">
     </div>
-    <div>
-      <p>
-        <a href="${channelInfo.url}" class="channel-link">${channelInfo.display_name}</a>
-      </p>
+    <div class="channel-text">
+      <div class="channel-name">
+        <a href="${channelInfo.url}" class="channel-link details">${channelInfo.display_name}</a>
+      </div>
+      <div class="stream">
+        <p class="details">${streamingInfo.stream ? streamingInfo.stream.game : "Offline"}</p>
+      </div>
     </div>
   </li>
 `;
